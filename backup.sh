@@ -33,15 +33,15 @@ else
     read -p "Does the output above look correct? [0/1]: " acceptContinue
     echo
     if [ $acceptContinue -eq 1 ]; then
-      echo "Continuing..."
-      echo
-      rsync -av --human-readable --progress --exclude-from="$excludePath" "$sourcePath" "$destinationPath"
-      echo
-      echo "Rsync command done."
-      echo
-      echo "End of the program reached."
+        echo "Continuing..."
+        echo
+        rsync -av --human-readable --progress --exclude-from="$excludePath" "$sourcePath" "$destinationPath"
+        echo
+        echo "Rsync command done."
+        echo
+        echo "End of the program reached."
     else
-      echo "The user did not approve the output. Program stopped."
-      exit 1
+        echo "The user did not approve the output. Program stopped."
+        exit 1
     fi
 fi
